@@ -21,7 +21,7 @@ Hoje, quem vende cursos online costuma enfrentar taxas elevadas, dependência de
 dfx start --background
 dfx deploy
 
-cd src-frontend
+cd frontend
 npm install
 npm run dev
 ```
