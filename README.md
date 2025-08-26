@@ -8,7 +8,7 @@
 
 ## Visão geral
 
-Hoje, quem vende cursos online costuma enfrentar taxas elevadas, dependência de plataformas centralizadas e pouca transparência sobre dados de venda e matrículas. A proposta deste projeto é um marketplace on-chain no ICP com taxa fixa de 2%, em que professores publicam cursos e alunos se matriculam com estado transparente e verificável entre canisters. O fluxo de pagamento, nesta versão inicial, é simulado para viabilizar um MVP rápido: o canister de pagamentos emite recibos e sinaliza confirmações para o canister de matrículas, preservando a arquitetura e a experiência do processo de compra, mas sem transferências reais de ICP. A ideia é mostrar como descentralização, custos previsíveis e auditabilidade podem reduzir fricções e aumentar a confiança no ecossistema de cursos digitais.
+Hoje, quem vende cursos online costuma enfrentar taxas elevadas, dependência de plataformas centralizadas e pouca transparência sobre dados de venda e matrículas. A proposta deste projeto é um marketplace on-chain no ICP com taxa fixa de 2%, em que professores publicam cursos e alunos se matriculam com estado transparente e verificável entre canisters. O fluxo de pagamento acontece da seguinte forma: o canister de pagamentos emite recibos e sinaliza confirmações para o canister de matrículas, preservando a arquitetura e a experiência do processo de compra. A ideia é mostrar como descentralização, custos previsíveis e auditabilidade podem reduzir fricções e aumentar a confiança no ecossistema de cursos digitais.
 
 ## Como rodar
 ```bash
