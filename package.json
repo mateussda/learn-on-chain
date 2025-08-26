@@ -1,0 +1,9 @@
+{
+  "name": "icp-mini-courses",
+  "private": true,
+  "scripts": {
+    "dfx:start": "dfx start --background",
+    "dfx:stop": "dfx stop",
+    "dfx:deploy": "dfx deploy"
+  }
+}
