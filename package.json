@@ -1,5 +1,5 @@
 {
-  "name": "icp-mini-courses",
+  "name": "learn-on-chain",
   "private": true,
   "scripts": {
     "dfx:start": "dfx start --background",
