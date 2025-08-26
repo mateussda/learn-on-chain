@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "canisters": {
+    "teachers": {
+      "type": "motoko",
+      "main": "canisters/teachers/main.mo"
+    },
+    "courses": {
+      "type": "motoko",
+      "main": "canisters/courses/main.mo"
+    },
+    "enrollments": {
+      "type": "motoko",
+      "main": "canisters/enrollments/main.mo"
+    },
+    "payments": {
+      "type": "motoko",
+      "main": "canisters/payments/main.mo"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943"
+    }
+  }
+}
