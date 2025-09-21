@@ -1,10 +1,14 @@
-import { useNavigate } from 'react-router-dom'
-import Card from '../components/Card'
+﻿import { useNavigate } from 'react-router-dom'
+import CardButton from '../components/CardButton'
 import Button from '../components/Button'
 import syllabus, { Lesson } from '../data/IntroMotokoOutline'
 
 export default function IntroMotoko() {
   const nav = useNavigate()
+
+  const handleLessonClick = (lessonId: number) => {
+    nav(`/courses/intro-motoko/player?lesson=${lessonId}`)
+  }
 
   return (
     <section className="section">
@@ -13,9 +17,9 @@ export default function IntroMotoko() {
         <h2 style={{ margin: '4px 0 8px' }}>Intro to Motoko</h2>
         <p className="subtle">
           Aprenda os fundamentos da linguagem Motoko no contexto do Internet
-          Computer: do básico da linguagem ao modelo de atores, estado
-          persistente, upgrades e padrões para canisters. Ideal para quem quer
-          estruturar dApps modulares e escaláveis.
+          Computer: do bǭsico da linguagem ao modelo de atores, estado
+          persistente, upgrades e padr��es para canisters. Ideal para quem quer
+          estruturar dApps modulares e escalǭveis.
         </p>
         <div className="row" style={{ marginTop: 12 }}>
           <span className="badge">Beginner</span>
@@ -35,21 +39,21 @@ export default function IntroMotoko() {
       </div>
 
       <div className="section">
-        <h3 style={{ margin: '0 0 8px' }}>What you’ll learn</h3>
+        <h3 style={{ margin: '0 0 8px' }}>What you�?Tll learn</h3>
         <ul className="list small">
           <li>
-            Fundamentos de Motoko: tipos, funções, módulos e organização de
-            código
+            Fundamentos de Motoko: tipos, fun����es, m��dulos e organiza��ǜo de
+            c��digo
           </li>
           <li>
-            Conceitos de atores e canisters no ICP, incluindo métodos de
-            consulta e atualização
+            Conceitos de atores e canisters no ICP, incluindo mǸtodos de
+            consulta e atualiza��ǜo
           </li>
           <li>
-            Persistência de estado com stable variables e prática de upgrades
+            PersistǦncia de estado com stable variables e prǭtica de upgrades
           </li>
           <li>
-            Padrões assíncronos, chamadas entre canisters e tratamento de erros
+            Padr��es ass��ncronos, chamadas entre canisters e tratamento de erros
           </li>
           <li>
             Montagem de um mini projeto local com dfx para consolidar conceitos
@@ -61,7 +65,11 @@ export default function IntroMotoko() {
         <h3 style={{ margin: '0 0 8px' }}>Syllabus</h3>
         <div className="grid">
           {syllabus.map((lesson: Lesson) => (
-            <Card key={lesson.id}>
+            <CardButton
+              key={lesson.id}
+              onClick={() => handleLessonClick(lesson.id)}
+              aria-label={`Abrir lesson ${lesson.id}: ${lesson.title}`}
+            >
               <div className="row" style={{ justifyContent: 'space-between' }}>
                 <div className="kicker">Lesson {lesson.id}</div>
                 <span className="badge">{lesson.duration}</span>
@@ -72,7 +80,7 @@ export default function IntroMotoko() {
                   <li key={i}>{p}</li>
                 ))}
               </ul>
-            </Card>
+            </CardButton>
           ))}
         </div>
       </div>
